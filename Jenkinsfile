@@ -36,13 +36,13 @@ pipeline{
         stage('docker image build'){
             steps{
                 echo 'docker image building...'
-                sh "docker image build -t devops-cicd-project:latest ."
+                sh "docker image build -t devops-cicd-project:v1 ."
             }
         }
         stage('run docker container'){
             steps{
                 echo 'running docker container...'
-                sh "docker run -d -p 9090:8080 devops-cicd-project:latest"
+                sh "docker run -d -p 9091:8080 devops-cicd-project:latest"
             }
         }
     }
