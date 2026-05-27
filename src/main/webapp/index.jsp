@@ -1,12 +1,12 @@
 <html>
 <body>
-<h1><font color='red'> Congratualtions, KASTRO KIRAN! Successfully Deployed JAVA Project  <font></h1>
+<h1><font color='green'> 🚀 Ganesh DevOps CI/CD Pipeline Successfully Deployed on Tomcat Server 🚀 <font></h1>
 
-<a href="http://www.youtube.com/@LearnWithKASTRO">Click Here To See My YouTube Channel</a>
+<a href="https://github.com/GANESHVEERABOINA">Click Here To Visit My GitHub Profile</a>
   
-  <h2> Thank you</h2>
+  <h2> ✅ Continuous Integration & Continuous Deployment Completed Successfully </h2>
   
-  <h3> Happy Learning!!! </h3>
+  <h3> Thankyou ..! </h3>
 
 </body>
 </html>
