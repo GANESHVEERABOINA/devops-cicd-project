@@ -192,6 +192,9 @@ https://github.com/GANESHVEERABOINA
 LinkedIn:
 https://www.linkedin.com/in/ganesh-veeraboina
 
+Project Documentation:
+[View Full Project Report](https://docs.google.com/document/d/1mrObShgXZiCEgYywSJo0n8F_ZwHh0C0bdpd-SrOR_9I/edit?usp=sharing)
+
 ---
 
 ⭐ If you found this project useful, feel free to Star this repository.
