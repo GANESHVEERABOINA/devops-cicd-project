@@ -3,85 +3,196 @@
 ## Internship Project
 This project was completed as part of my DevOps Internship training at iStudio.
 
-The project demonstrates the complete deployment lifecycle of a Java web application using Jenkins, GitHub, Maven, and Apache Tomcat on AWS EC2.
+# 🚀 DevOps CI/CD Pipeline Automation using Jenkins, Docker & AWS EC2
 
-Initially, the application was deployed manually to understand the server setup, deployment workflow, and configuration process. Later, the deployment process was automated using Jenkins CI/CD pipeline integration.
+## 📌 Project Overview
 
-Whenever changes are made to the application source code in the GitHub repository, Jenkins automatically pulls the updated code, builds the application using Maven, generates the WAR file, and deploys it into the Apache Tomcat server automatically.
+This project demonstrates the implementation of an end-to-end CI/CD pipeline for a Java Maven web application using GitHub, Jenkins, Maven, Docker, Apache Tomcat, and AWS EC2.
 
----
+The project was implemented in three deployment phases:
 
-## Project Workflow
+1. Manual Deployment using Maven & Tomcat
+2. Automated Deployment using Jenkins & Tomcat
+3. Dockerized Deployment using Jenkins Pipeline & Docker
 
-### Phase 1: Manual Deployment
-- Created AWS EC2 Linux Instance
-- Installed and configured Jenkins
-- Installed and configured Apache Tomcat
-- Changed Tomcat default port from 8080 to 9090
-- Configured Tomcat users and roles
-- Manually deployed WAR file into Tomcat server
-- Verified deployment through browser
-
-### Phase 2: Automated Deployment
-- Integrated GitHub repository with Jenkins
-- Configured Maven build automation
-- Installed Jenkins deployment plugins
-- Automated WAR file deployment into Tomcat
-- Implemented CI/CD workflow automation
+The objective of this project is to understand deployment automation, containerization, CI/CD workflows, and real-world troubleshooting scenarios. Jenkins is commonly used to automate build and deployment workflows in CI/CD pipelines. :contentReference[oaicite:0]{index=0}
 
 ---
 
-## Automation Flow
+## 🛠️ Tools & Technologies
 
-GitHub Code Changes  
-↓  
-Jenkins Automatically Triggers Build  
-↓  
-Maven Build & Package  
-↓  
-WAR File Generation  
-↓  
-Automatic Deployment to Tomcat  
-↓  
-Updated Application Live on Server
-
----
-
-## Tech Stack
-- Jenkins
 - GitHub
+- Jenkins
 - Maven
+- Docker
 - Apache Tomcat
 - AWS EC2
+- Jenkinsfile (Groovy Pipeline)
 - Linux
-- Git
-- CI/CD
 
 ---
 
-## Features
-- Manual deployment implementation
-- Automated CI/CD pipeline
-- Continuous Integration
-- Continuous Deployment
-- Maven build automation
-- Jenkins-Tomcat integration
-- Automated application deployment
+## 🏗️ Deployment Phases
+
+### 1️⃣ Manual Deployment using Maven & Tomcat
+
+- Installed and configured Apache Tomcat on AWS EC2.
+- Built the application using Maven.
+- Generated WAR file manually.
+- Deployed WAR file through Tomcat Manager.
+- Verified application deployment through browser access.
 
 ---
 
-## Learning Outcomes
-Through this internship project, I gained hands-on experience in:
-- CI/CD pipeline implementation
-- Jenkins automation
-- Linux server administration
-- AWS EC2 management
-- Maven build lifecycle
-- Apache Tomcat configuration
-- Deployment automation workflows
+### 2️⃣ Automated Deployment using Jenkins & Tomcat
+
+- Integrated GitHub repository with Jenkins.
+- Configured Maven inside Jenkins.
+- Automated application build process.
+- Generated WAR file automatically.
+- Deployed application to Apache Tomcat using Jenkins.
 
 ---
 
-## Repository
-GitHub Repository:
-https://github.com/GANESHVEERABOINA/devops-cicd-project
+### 3️⃣ Dockerized Deployment using Jenkins Pipeline
+
+- Created Dockerfile for Tomcat container deployment.
+- Developed Jenkinsfile using Groovy Pipeline syntax.
+- Configured Jenkins Pipeline project.
+- Automated Docker image build process.
+- Automated Docker container deployment.
+- Hosted application inside Dockerized Tomcat container.
+
+---
+
+## ⚙️ Jenkins Pipeline Stages
+
+```text
+Clone Repository
+      ↓
+Build Application
+      ↓
+Compile Code
+      ↓
+Package WAR File
+      ↓
+Build Docker Image
+      ↓
+Run Docker Container
+      ↓
+Application Deployment
+```
+
+---
+
+## 🔥 Real-Time Issues Resolved
+
+### Docker Permission Denied Error
+
+Issue:
+```bash
+permission denied while trying to connect to Docker daemon
+```
+
+Solution:
+```bash
+sudo usermod -aG docker jenkins
+sudo systemctl restart jenkins
+sudo systemctl restart docker
+```
+
+---
+
+### Docker Port Conflict Issue
+
+Issue:
+```bash
+bind: address already in use
+```
+
+Solution:
+- Identified port conflict.
+- Reconfigured container port mapping.
+- Successfully redeployed application.
+
+---
+
+## 📂 Project Structure
+
+```text
+devops-cicd-project
+│
+├── src/
+├── pom.xml
+├── Dockerfile
+├── Jenkinsfile
+├── README.md
+└── target/
+```
+
+---
+
+## 🌐 CI/CD Workflow
+
+```text
+GitHub Repository
+        ↓
+Jenkins Pipeline
+        ↓
+Maven Build
+        ↓
+WAR Packaging
+        ↓
+Docker Image Build
+        ↓
+Docker Container Deployment
+        ↓
+Tomcat Application Hosting
+        ↓
+AWS EC2
+```
+
+---
+
+## 🎯 Key Learning Outcomes
+
+- CI/CD Pipeline Automation
+- Jenkins Pipeline Scripting
+- Docker Containerization
+- Apache Tomcat Deployment
+- Maven Build Automation
+- AWS EC2 Management
+- Deployment Troubleshooting
+- GitHub Integration
+
+---
+
+## 📸 Project Screenshots
+
+- Architecture Diagram
+- Jenkins Pipeline Success
+- Docker Troubleshooting
+- Final Deployment Output
+
+---
+
+## 📚 References
+
+This project follows common CI/CD practices involving GitHub, Jenkins, Maven, Docker, and Tomcat deployment workflows. :contentReference[oaicite:1]{index=1}
+
+---
+
+## 👨‍💻 Author
+
+**Ganesh Veeraboina**
+
+GitHub:
+https://github.com/GANESHVEERABOINA
+
+LinkedIn:
+https://www.linkedin.com/in/ganesh-veeraboina
+
+---
+
+⭐ If you found this project useful, feel free to Star this repository.
+
