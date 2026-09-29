@@ -1,6 +1,6 @@
 pipeline{
-    agent any 
-    }
+    agent any
+}
     stages{
         stage('clone repo '){
             steps{
@@ -44,4 +44,3 @@ pipeline{
             }
         }
     }
-}
