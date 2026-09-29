@@ -42,7 +42,7 @@ pipeline{
         stage('run docker container'){
             steps{
                 echo 'running docker container...'
-                sh "docker run -d -p 9091:8080 devops-cicd-project:latest"
+                sh "docker run -d -p 9091:8080 --name DevOps-cicd devops-cicd-project:v1"
             }
         }
     }
