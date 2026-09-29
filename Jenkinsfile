@@ -1,46 +1,55 @@
-pipeline{
+pipeline {
     agent any
-}
-    stages{
-        stage('clone repo '){
-            steps{
-                git branch: 'main', url: 'https://github.com/GANESHVEERABOINA/devops-cicd-project.git'
+
+    stages {
+
+        stage('clone repo') {
+            steps {
+                git branch: 'main',
+                    url: 'https://github.com/GANESHVEERABOINA/devops-cicd-project.git'
             }
         }
-        stage('build'){
-            steps{
+
+        stage('build') {
+            steps {
                 echo 'Building...'
                 sh "mvn clean package"
             }
         }
-        stage('compile'){
-            steps{
+
+        stage('compile') {
+            steps {
                 echo 'Compiling...'
                 sh "mvn compile"
             }
         }
-        stage('package'){
-            steps{
+
+        stage('package') {
+            steps {
                 echo 'Packaging...'
                 sh "mvn package"
             }
         }
-        stage ('test'){
-            steps{
+
+        stage('test') {
+            steps {
                 echo 'Testing...'
                 sh "mvn test"
             }
         }
-        stage('docker image build'){
-            steps{
-                echo 'docker image building...'
+
+        stage('docker image build') {
+            steps {
+                echo 'Docker image building...'
                 sh "docker image build -t devops-cicd-project:v1 ."
             }
         }
-        stage('run docker container'){
-            steps{
-                echo 'running docker container...'
+
+        stage('run docker container') {
+            steps {
+                echo 'Running docker container...'
                 sh "docker run -d -p 9091:8080 --name DevOps-cicd devops-cicd-project:v1"
             }
         }
     }
+}
